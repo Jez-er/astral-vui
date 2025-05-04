@@ -1,7 +1,40 @@
-import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
+import path from 'path'
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
+import dts from 'vite-plugin-dts'
+import { configDefaults, defineConfig } from 'vitest/config'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+	test: {
+		globals: true,
+		environment: 'node',
+		exclude: [...configDefaults.exclude, 'e2e/**'],
+	},
+	plugins: [
+		vue(),
+		dts({
+			include: ['src/core'],
+			tsconfigPath: './tsconfig.app.json',
+			insertTypesEntry: true,
+		}),
+		cssInjectedByJsPlugin(),
+		tailwindcss(),
+	],
+	build: {
+		lib: {
+			entry: path.resolve(__dirname, 'src/core/index.ts'),
+			name: 'NebulaForm',
+			formats: ['es', 'cjs'],
+			fileName: format => `index.${format}.js`,
+		},
+		rollupOptions: {
+			external: ['vue'],
+			output: {
+				globals: {
+					vue: 'Vue',
+				},
+			},
+		},
+	},
 })
