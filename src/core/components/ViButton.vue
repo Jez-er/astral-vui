@@ -1,10 +1,7 @@
 <template>
 	<button
-		:class="[
-			baseClasses,
-			variantClasses[variant],
-			disabled ? 'opacity-50 cursor-not-allowed' : 'hover:brightness-110',
-		]"
+		class="btn"
+		:class="[variant, { disabled }]"
 		:disabled="disabled"
 		@click="handleClick"
 	>
@@ -29,12 +26,36 @@ const emit = defineEmits(['click'])
 function handleClick(event: MouseEvent) {
 	if (!props.disabled) emit('click', event)
 }
-
-const baseClasses = 'px-4 py-2 rounded-lg font-semibold transition duration-200'
-
-const variantClasses: Record<string, string> = {
-	primary: 'bg-blue-600 text-white',
-	secondary: 'bg-gray-200 text-gray-800',
-	danger: 'bg-red-600 text-white',
-}
 </script>
+
+<style scoped>
+.btn {
+	border-radius: 0.5rem;
+	font-weight: 600;
+	transition: filter 0.2s ease, opacity 0.2s ease;
+	cursor: pointer;
+}
+
+.btn:not(.disabled):hover {
+	filter: brightness(1.1);
+}
+
+.btn.disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.btn.primary {
+	background-color: #2563eb;
+	color: white;
+}
+
+.btn.secondary {
+	background-color: #e5e7eb;
+	color: #1f2937;
+}
+
+.btn.danger {
+	background-color: #dc2626;
+}
+</style>

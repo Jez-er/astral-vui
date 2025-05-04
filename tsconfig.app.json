@@ -11,8 +11,9 @@
 		"noUncheckedSideEffectImports": true
 	},
 	"include": [
+		"src/index.d.ts",
 		"src/**/*.ts",
-		"src/**/*.tsx",
+		"src/**/*.css",
 		"src/**/*.vue",
 		"playground/**/*.ts",
 		"playground/**/*.vue"
