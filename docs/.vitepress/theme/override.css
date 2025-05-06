@@ -1,0 +1,54 @@
+/**
+ * override.css — пользовательская цветовая тема для VitePress
+ * Зелёно-жёлтая палитра, поддержка тёмной и светлой тем
+ */
+
+:root {
+	/* === Брендовые цвета (зелёные) === */
+	--vp-c-brand: #4caf50;
+	--vp-c-brand-light: #81c784;
+	--vp-c-brand-dark: #388e3c;
+	--vp-c-brand-1: #388e3c;
+	--vp-c-brand-2: #4caf50;
+	--vp-c-brand-3: #66bb6a;
+	--vp-c-brand-soft: rgba(129, 199, 132, 0.1);
+
+	/* === Цвета предупреждений (жёлтые) === */
+	--vp-c-warning-1: #fdd835;
+	--vp-c-warning-2: #ffee58;
+	--vp-c-warning-3: #fff176;
+	--vp-c-warning-soft: rgba(255, 235, 59, 0.1);
+
+	/* === Общие цвета === */
+	--vp-c-accent: #ffeb3b;
+	--vp-c-bg: #ffffff;
+	--vp-c-bg-soft: #f5f5f5;
+	--vp-c-text: #212121;
+	--vp-c-text-light: #555555;
+	--vp-c-divider: #e0e0e0;
+}
+
+.dark {
+	/* === Брендовые цвета (зелёные) — тёмная тема === */
+	--vp-c-brand: #81c784;
+	--vp-c-brand-light: #a5d6a7;
+	--vp-c-brand-dark: #66bb6a;
+	--vp-c-brand-1: #a5d6a7;
+	--vp-c-brand-2: #81c784;
+	--vp-c-brand-3: #66bb6a;
+	--vp-c-brand-soft: rgba(129, 199, 132, 0.1);
+
+	/* === Цвета предупреждений (жёлтые) === */
+	--vp-c-warning-1: #fdd835;
+	--vp-c-warning-2: #ffee58;
+	--vp-c-warning-3: #fff176;
+	--vp-c-warning-soft: rgba(255, 235, 59, 0.1);
+
+	/* === Общие цвета === */
+	--vp-c-accent: #ffeb3b;
+	--vp-c-bg: #161618;
+	--vp-c-bg-soft: #1e1e1e;
+	--vp-c-text: #eeeeee;
+	--vp-c-text-light: #bbbbbb;
+	--vp-c-divider: #333333;
+}
