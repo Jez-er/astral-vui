@@ -3,8 +3,11 @@
 layout: home
 
 hero:
-  name: "Vui"
-  text: " UI librery for Vue.js by Astral Team "
+  name: 'Vui'
+  image:
+    src: 'https://github.com/Jez-er/astral-vui/blob/main/assets/Vui.png?raw=true'
+    alt: 'Vui'
+  text: 'UI librery for Vue.js'
   tagline: My great project tagline
   actions:
     - theme: brand
@@ -22,4 +25,3 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-

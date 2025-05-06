@@ -4,8 +4,18 @@ import { sidebar } from './sidebar'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: 'Vui',
-	description: ' UI librery for Vue.js by Astral Team ',
+	description: 'UI librery for Vue.js',
+	head: [
+		[
+			'link',
+			{
+				rel: 'icon',
+				href: 'https://github.com/Jez-er/astral-vui/blob/main/assets/Vui.png?raw=true',
+			},
+		],
+	],
 	themeConfig: {
+		logo: 'https://github.com/Jez-er/astral-vui/blob/main/assets/Vui.png?raw=true',
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
 			{ text: 'Home', link: '/' },
