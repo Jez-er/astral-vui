@@ -1,42 +1,56 @@
 {
-  "name": "astral-vui",
-  "version": "0.0.1",
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "license": "MIT",
-  "author": "Astral Team",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview",
-    "pub:alfa": "npm publish --tag alfa",
-    "pub:beta": "npm publish --tag beta",
-    "pub:latest": "npm publish --tag latest",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
-  },
-  "peerDependencies": {
-    "lucide-vue-next": "^0.507.0",
-    "vue": "^3.5.13"
-  },
-  "devDependencies": {
-    "@types/node": "^22.15.3",
-    "@vitejs/plugin-vue": "^5.2.2",
-    "@vue/tsconfig": "^0.7.0",
-    "typescript": "~5.7.2",
-    "vite": "^6.3.1",
-    "vite-plugin-dts": "^4.5.3",
-    "vitepress": "^1.6.3",
-    "vitest": "^3.1.2",
-    "vue-tsc": "^2.2.8"
-  },
-  "dependencies": {
-    "vite-plugin-css-injected-by-js": "^3.5.2"
-  }
+	"name": "astral-vui",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.es.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"license": "MIT",
+	"author": "Astral Team",
+	"scripts": {
+		"dev": "npm run storybook & npm run docs:dev",
+		"build": "vue-tsc -b && vite build",
+		"pub:alfa": "npm publish --tag alfa",
+		"pub:beta": "npm publish --tag beta",
+		"pub:latest": "npm publish --tag latest",
+		"docs:dev": "vitepress dev docs",
+		"docs:build": "vitepress build docs",
+		"docs:preview": "vitepress preview docs",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
+	},
+	"peerDependencies": {
+		"lucide-vue-next": "^0.507.0",
+		"vue": "^3.5.13"
+	},
+	"devDependencies": {
+		"@chromatic-com/storybook": "^3.2.6",
+		"@storybook/addon-essentials": "^8.6.12",
+		"@storybook/addon-onboarding": "^8.6.12",
+		"@storybook/blocks": "^8.6.12",
+		"@storybook/experimental-addon-test": "^8.6.12",
+		"@storybook/test": "^8.6.12",
+		"@storybook/vue3": "^8.6.12",
+		"@storybook/vue3-vite": "^8.6.12",
+		"@types/node": "^22.15.3",
+		"@vitejs/plugin-vue": "^5.2.2",
+		"@vitest/browser": "^3.1.2",
+		"@vitest/coverage-v8": "^3.1.2",
+		"@vue/tsconfig": "^0.7.0",
+		"playwright": "^1.52.0",
+		"storybook": "^8.6.12",
+		"ts-node": "^10.9.2",
+		"typescript": "~5.7.2",
+		"vite": "^6.3.1",
+		"vite-plugin-dts": "^4.5.3",
+		"vitepress": "^1.6.3",
+		"vitest": "^3.1.2",
+		"vue-tsc": "^2.2.8"
+	},
+	"dependencies": {
+		"vite-plugin-css-injected-by-js": "^3.5.2"
+	}
 }

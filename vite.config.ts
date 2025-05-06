@@ -31,6 +31,11 @@ export default defineConfig({
 			},
 		}),
 	],
+	resolve: {
+		alias: {
+			'@components': path.resolve(__dirname, '../../src/core/components'),
+		},
+	},
 	build: {
 		lib: {
 			entry: path.resolve(__dirname, 'src/core/index.ts'),
