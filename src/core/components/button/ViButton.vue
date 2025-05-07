@@ -59,7 +59,7 @@ withDefaults(defineProps<Props>(), {
 
 .btn--primary:hover {
 	background-color: var(--vui-primary);
-	opacity: 0.85;
+	opacity: 0.75;
 }
 
 .btn--destructive {
@@ -69,7 +69,7 @@ withDefaults(defineProps<Props>(), {
 
 .btn--destructive:hover {
 	background-color: var(--vui-destructive);
-	opacity: 0.85;
+	opacity: 0.75;
 }
 
 .btn--success {
@@ -79,7 +79,7 @@ withDefaults(defineProps<Props>(), {
 
 .btn--success:hover {
 	background-color: var(--vui-success);
-	opacity: 0.85;
+	opacity: 0.75;
 }
 
 .btn--outline {
