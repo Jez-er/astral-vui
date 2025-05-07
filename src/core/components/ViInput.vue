@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { ViIcons } from '.'
 import type { IconName } from '../types/icons'
+import { useVModel } from '../utils/useVModel'
 
 const props = defineProps<{
 	modelValue?: string
@@ -15,6 +16,11 @@ const emit = defineEmits<{
 	(e: 'update:modelValue', value: string): void
 }>()
 
+const modelValue = useVModel(props, 'modelValue', emit, {
+	passive: false,
+	defaultValue: '',
+})
+
 const isPasswordVisible = ref(false)
 const inputType = computed(() =>
 	props.type === 'password' && isPasswordVisible.value ? 'text' : props.type
@@ -22,13 +28,6 @@ const inputType = computed(() =>
 
 const togglePasswordVisibility = () => {
 	isPasswordVisible.value = !isPasswordVisible.value
-}
-
-const handleInput = (event: Event) => {
-	const target = event.target as HTMLInputElement | null
-	if (target) {
-		emit('update:modelValue', target.value)
-	}
 }
 </script>
 
@@ -41,8 +40,7 @@ const handleInput = (event: Event) => {
 			class="input-icon"
 		/>
 		<input
-			:value="modelValue"
-			@input="handleInput"
+			v-model="modelValue"
 			v-bind="$attrs"
 			:type="inputType"
 			:placeholder="props.placeholder"
