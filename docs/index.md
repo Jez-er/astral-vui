@@ -8,14 +8,14 @@ hero:
     src: 'https://github.com/Jez-er/astral-vui/blob/main/assets/Vui.png?raw=true'
     alt: 'Vui'
   text: 'UI librery for Vue.js'
-  tagline: My great project tagline
+  tagline: Made by Astral Team
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Getting Started
+      link: /docs/guide/installation
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: GitHub
+      link: https://github.com/Jez-er/astral-vui
 
 features:
   - title: Feature A

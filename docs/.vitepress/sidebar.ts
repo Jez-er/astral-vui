@@ -1,10 +1,10 @@
 export const sidebar = [
 	{
-		text: 'Getting started',
+		text: 'Guides',
 		items: [
-			{ text: 'Introduction', link: '/docs/introduction' },
-			{ text: 'Installation', link: '/docs/installation' },
-			{ text: 'Quick Start', link: '/docs/quickStart' },
+			{ text: 'Introduction', link: '/docs/guides/introduction' },
+			{ text: 'Installation', link: '/docs/guides/installation' },
+			{ text: 'Quick Start', link: '/docs/guides/quickStart' },
 		],
 	},
 	{

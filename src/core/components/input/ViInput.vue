@@ -1,16 +1,21 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { ViIcons } from '.'
-import type { IconName } from '../types/icons'
-import { useVModel } from '../utils/useVModel'
+import { ViIcons } from '..'
+import type { IconName } from '../../types/icons'
+import { useVModel } from '../../utils/useVModel'
 
-const props = defineProps<{
-	modelValue?: string
-	iconName?: IconName
-	type?: 'text' | 'password' | 'email' | 'number'
-	placeholder?: string
-	class?: string
-}>()
+const props = withDefaults(
+	defineProps<{
+		modelValue?: string
+		iconName?: IconName
+		type?: 'text' | 'password' | 'email' | 'number'
+		placeholder?: string
+		class?: string
+	}>(),
+	{
+		type: 'text',
+	}
+)
 
 const emit = defineEmits<{
 	(e: 'update:modelValue', value: string): void
@@ -37,6 +42,7 @@ const togglePasswordVisibility = () => {
 			v-if="props.iconName"
 			:name="props.iconName"
 			:size="18"
+			:strokeWidth="2"
 			class="input-icon"
 		/>
 		<input
@@ -53,7 +59,11 @@ const togglePasswordVisibility = () => {
 			type="button"
 			class="toggle-button"
 		>
-			<ViIcons :name="isPasswordVisible ? 'EyeOff' : 'Eye'" :size="18" />
+			<ViIcons
+				:strokeWidth="2"
+				:name="isPasswordVisible ? 'EyeOff' : 'Eye'"
+				:size="18"
+			/>
 		</button>
 	</div>
 </template>
@@ -63,14 +73,14 @@ const togglePasswordVisibility = () => {
 	display: flex;
 	align-items: center;
 	padding: 0.5rem;
-	background-color: #171717; /* neutral-900 */
+	background-color: var(--vui-background);
 	border-radius: 0.5rem;
 	gap: 0.5rem;
 	width: 100%;
 }
 
 .input-icon {
-	color: #9ca3af; /* gray-400 */
+	color: var(--vui-background-foreground);
 }
 
 .input-field {
@@ -79,11 +89,11 @@ const togglePasswordVisibility = () => {
 	border: none;
 	color: white;
 	width: 100%;
-	font-size: 0.875rem; /* text-sm */
+	font-size: 0.875rem;
 }
 
 .input-field::placeholder {
-	color: #9ca3af;
+	color: var(--vui-secondary);
 	font-size: 0.875rem;
 }
 
@@ -95,14 +105,15 @@ const togglePasswordVisibility = () => {
 
 .toggle-button {
 	margin-left: 0.5rem;
-	color: #9ca3af; /* gray-400 */
+	color: var(--vui-background-foreground);
+	opacity: 0.8;
 	background: none;
 	border: none;
 	cursor: pointer;
-	transition: color 0.2s ease;
+	transition: all 0.4s ease;
 }
 
 .toggle-button:hover {
-	color: white;
+	opacity: 1;
 }
 </style>

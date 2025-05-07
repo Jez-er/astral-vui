@@ -16,16 +16,14 @@ export default defineConfig({
 	],
 	themeConfig: {
 		logo: 'https://github.com/Jez-er/astral-vui/blob/main/assets/Vui.png?raw=true',
-		// https://vitepress.dev/reference/default-theme-config
 		nav: [
 			{ text: 'Home', link: '/' },
-			{ text: 'Docs', link: '/docs/components/ViButton.md' },
+			{ text: 'Docs', link: '/docs/guides/introduction.md' },
 		],
 
 		sidebar: sidebar,
-
 		socialLinks: [
-			{ icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+			{ icon: 'github', link: 'https://github.com/Jez-er/astral-vui' },
 		],
 	},
 })
