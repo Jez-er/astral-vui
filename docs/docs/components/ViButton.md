@@ -9,10 +9,10 @@ import { ViButton } from 'astral-vui'
 </script>
 
 <template>
-  <ViButton size='lg'>Button</ViButton>
+  <ViButton>Button</ViButton>
 </template>`">
   <template #preview>
-    <ViButton size='lg'>Button</ViButton>
+    <ViButton z>Button</ViButton>
   </template>
 </PreviewCode>
 

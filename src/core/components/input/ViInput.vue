@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { ViIcons } from '..'
 import type { IconName } from '../../types/icons'
 import { useVModel } from '../../utils/useVModel'
@@ -27,6 +27,7 @@ const modelValue = useVModel(props, 'modelValue', emit, {
 })
 
 const isPasswordVisible = ref(false)
+
 const inputType = computed(() =>
 	props.type === 'password' && isPasswordVisible.value ? 'text' : props.type
 )
@@ -34,6 +35,12 @@ const inputType = computed(() =>
 const togglePasswordVisibility = () => {
 	isPasswordVisible.value = !isPasswordVisible.value
 }
+
+const inputValue = ref(modelValue.value)
+
+watch(inputValue, newValue => {
+	modelValue.value = newValue
+})
 </script>
 
 <template>
@@ -46,7 +53,7 @@ const togglePasswordVisibility = () => {
 			class="input-icon"
 		/>
 		<input
-			v-model="modelValue"
+			v-model="inputValue"
 			v-bind="$attrs"
 			:type="inputType"
 			:placeholder="props.placeholder"
@@ -92,8 +99,14 @@ const togglePasswordVisibility = () => {
 	font-size: 0.875rem;
 }
 
+.input-field:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
 .input-field::placeholder {
 	color: var(--vui-secondary);
+	opacity: 0.5;
 	font-size: 0.875rem;
 }
 

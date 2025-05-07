@@ -11,7 +11,7 @@ export const sidebar = [
 		text: 'Components',
 		items: [
 			{ text: 'Button', link: '/docs/components/ViButton' },
-			{ text: 'Input', link: '/docs/installation' },
+			{ text: 'Input', link: '/docs/components/ViInput' },
 			{ text: 'Icons', link: '/docs/quickStart' },
 		],
 	},
