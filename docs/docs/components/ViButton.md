@@ -4,22 +4,28 @@ Displays a button or a component that looks like a button.
 
 ## Demo
 
-::: tip Primary
+<PreviewCode lang="vue" :code="`<script setup lang='ts'>
+import { ViButton } from 'astral-vui'
+</script>
 
-<p></p>
-<ViButton style="padding: 10px 25px">Button</ViButton>
-<p></p>
-:::
+<template>
+  <ViButton>Button</ViButton>
+</template>`">
+  <template #preview>
+    <ViButton>Button</ViButton>
+  </template>
+</PreviewCode>
 
 ## Usage
 
-```ts
+<Code lang="vue" :code="`<script setup lang='ts'>
 import { ViButton } from 'astral-vui'
-```
+</script>
 
-```vue
-<ViButton>Button</ViButton>
-```
+<template>
+  <ViButton>Button</ViButton>
+</template>`">
+</Code>
 
 ## Examples
 
@@ -43,4 +49,6 @@ import { ViButton } from 'astral-vui'
 
 <script setup>
 import {ViButton} from '../../../src/core'
+import PreviewCode from '../../src/PreviewCode.vue'
+import Code from '../../src/Code.vue'
 </script>

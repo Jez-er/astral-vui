@@ -1,0 +1,16 @@
+:root {
+	--primary: #3b82f6;
+	--primary-foreground: #ffffff;
+	--destructive: #ef4444;
+	--destructive-foreground: #ffffff;
+	--secondary: #f3f4f6;
+	--secondary-foreground: #111827;
+	--accent: #e0f2fe;
+	--accent-foreground: #0369a1;
+
+	--ring: #3b82f6;
+	--ring-offset-background: #ffffff;
+
+	--background: #ffffff;
+	--input: #d1d5db;
+}

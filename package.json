@@ -11,7 +11,7 @@
 	"license": "MIT",
 	"author": "Astral Team",
 	"scripts": {
-		"dev": "npm run storybook & npm run docs:dev",
+		"dev": "npm run docs:dev & npm run storybook",
 		"build": "vue-tsc -b && vite build",
 		"pub:alfa": "npm publish --tag alfa",
 		"pub:beta": "npm publish --tag beta",
@@ -51,6 +51,7 @@
 		"vue-tsc": "^2.2.8"
 	},
 	"dependencies": {
+		"shiki": "^3.4.0",
 		"vite-plugin-css-injected-by-js": "^3.5.2"
 	}
 }
