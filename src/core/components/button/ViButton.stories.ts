@@ -14,8 +14,9 @@ const meta = {
 		variant: {
 			control: 'select',
 			options: [
-				'default',
+				'primary',
 				'destructive',
+				'success',
 				'outline',
 				'secondary',
 				'ghost',
@@ -26,7 +27,7 @@ const meta = {
 	},
 	args: {
 		size: 'default',
-		variant: 'default',
+		variant: 'primary',
 		as: 'button',
 		onClick: action('button-click'),
 	},
@@ -37,7 +38,49 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
 	args: {
-		// Текст кнопки через default slot
 		default: 'Primary Button',
+		variant: 'primary',
+	},
+}
+
+export const Secondary: Story = {
+	args: {
+		default: 'Secondary Button',
+		variant: 'secondary',
+	},
+}
+
+export const Destructive: Story = {
+	args: {
+		default: 'Destructive Button',
+		variant: 'destructive',
+	},
+}
+
+export const Ghost: Story = {
+	args: {
+		default: 'Ghost Button',
+		variant: 'ghost',
+	},
+}
+
+export const Link: Story = {
+	args: {
+		default: 'Link Button',
+		variant: 'link',
+	},
+}
+
+export const Success: Story = {
+	args: {
+		default: 'Success Button',
+		variant: 'success',
+	},
+}
+
+export const Outline: Story = {
+	args: {
+		default: 'Outline Button',
+		variant: 'outline',
 	},
 }
