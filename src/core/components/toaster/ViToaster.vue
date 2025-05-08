@@ -71,8 +71,8 @@ function toastIconClasses(type: ToastType) {
 	align-items: center;
 	gap: 0.5rem;
 	padding: 0.5rem 1rem 0.5rem 0.5rem;
-	background-color: black;
-	color: white;
+	background-color: var(--vui-background);
+	color: var(--vui-background-foreground);
 	border-radius: 1rem;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	border: 2px solid;
@@ -81,15 +81,15 @@ function toastIconClasses(type: ToastType) {
 }
 
 .toast--success {
-	border-color: #16a34a; /* green-600 */
+	border-color: var(--vui-success);
 }
 
 .toast--error {
-	border-color: #dc2626; /* red-600 */
+	border-color: var(--vui-destructive);
 }
 
 .toast--info {
-	border-color: #2563eb; /* blue-600 */
+	border-color: var(--vui-primary);
 }
 
 .icon {
@@ -98,15 +98,15 @@ function toastIconClasses(type: ToastType) {
 }
 
 .icon--success {
-	color: #16a34a;
+	color: var(--vui-success);
 }
 
 .icon--error {
-	color: #dc2626;
+	color: var(--vui-destructive);
 }
 
 .icon--info {
-	color: #2563eb;
+	color: var(--vui-primary);
 }
 
 .message {
