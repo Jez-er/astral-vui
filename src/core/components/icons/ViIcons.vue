@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import * as icons from 'lucide-vue-next'
 import { computed } from 'vue'
-import type { IconComponent, IconName } from '../types/icons'
-
-// Извлекаем только имена компонентов из модуля icons
+import type { IconComponent, IconName } from '../../types/icons'
 
 const props = defineProps<{
 	name: IconName

@@ -1,7 +1,7 @@
-// https://vitepress.dev/guide/custom-theme
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
+import { createToaster } from '../../../src/core'
 import './components.css'
 import './override.css'
 import './style.css'
@@ -14,6 +14,8 @@ export default {
 		})
 	},
 	enhanceApp({ app, router, siteData }) {
-		// ...
+		const toaster = createToaster()
+
+		app.provide('toaster', toaster)
 	},
 } satisfies Theme

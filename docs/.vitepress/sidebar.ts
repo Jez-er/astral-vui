@@ -8,11 +8,17 @@ export const sidebar = [
 		],
 	},
 	{
+		text: 'Extended',
+		items: [
+			{ text: 'Toaster', link: '/docs/extended/toaster' },
+			{ text: 'Icons', link: '/docs/extended/icons' },
+		],
+	},
+	{
 		text: 'Components',
 		items: [
 			{ text: 'Button', link: '/docs/components/ViButton' },
 			{ text: 'Input', link: '/docs/components/ViInput' },
-			{ text: 'Icons', link: '/docs/quickStart' },
 		],
 	},
 ]
