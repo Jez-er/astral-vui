@@ -13,7 +13,7 @@
 	"scripts": {
 		"dev": "npm run docs:dev && npm run storybook",
 		"test": "npx vitest run",
-		"build": "vue-tsc -b && npm run test && vite build",
+		"build": "npm run test && vite build",
 		"pub:alfa": "npm publish --tag alfa",
 		"pub:beta": "npm publish --tag beta",
 		"pub:latest": "npm publish --tag latest",

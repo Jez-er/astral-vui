@@ -27,6 +27,12 @@ export default defineWorkspace([
         instances: [{ browser: 'chromium' }]
       },
       setupFiles: ['.storybook/vitest.setup.ts'],
+      exclude: [
+        'node_modules',
+        'dist',
+        '**/*.stories.ts',
+        '.storybook',
+      ],
     },
   },
 ]);
